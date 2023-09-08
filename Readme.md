@@ -1,4 +1,4 @@
-# 📈 Aoe-Elo Liquipedia-client
+# 📈 Liquipedia-client
 
 Liquipedia API-Client generated from OpenAPI
 
