@@ -1,4 +1,4 @@
-# OpenAPI\Client\V3Api
+# Liquipedia\Client\V3Api
 
 All URIs are relative to https://api.liquipedia.net/api/v3, except if the operation defines another base path.
 
@@ -25,7 +25,7 @@ All URIs are relative to https://api.liquipedia.net/api/v3, except if the operat
 ## `broadcastersGet()`
 
 ```php
-broadcastersGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+broadcastersGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get broadcasters
@@ -40,12 +40,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -81,7 +81,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ try {
 ## `companyGet()`
 
 ```php
-companyGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+companyGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get companies
@@ -114,12 +114,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -155,7 +155,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ try {
 ## `datapointGet()`
 
 ```php
-datapointGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+datapointGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get datapoints
@@ -188,12 +188,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -229,7 +229,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ try {
 ## `externalmedialinkGet()`
 
 ```php
-externalmedialinkGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+externalmedialinkGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get media links
@@ -262,12 +262,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -303,7 +303,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ try {
 ## `matchGet()`
 
 ```php
-matchGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $rawstreams, $streamurls): \OpenAPI\Client\Model\BroadcastersGet200Response
+matchGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $rawstreams, $streamurls): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get matches
@@ -336,12 +336,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -381,7 +381,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ try {
 ## `placementGet()`
 
 ```php
-placementGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+placementGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get placements
@@ -414,12 +414,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -455,7 +455,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -473,7 +473,7 @@ try {
 ## `playerGet()`
 
 ```php
-playerGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+playerGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get players
@@ -488,12 +488,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -529,7 +529,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -547,7 +547,7 @@ try {
 ## `seriesGet()`
 
 ```php
-seriesGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+seriesGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get series
@@ -562,12 +562,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -603,7 +603,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -621,7 +621,7 @@ try {
 ## `squadplayerGet()`
 
 ```php
-squadplayerGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+squadplayerGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get squadplayer
@@ -636,12 +636,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -677,7 +677,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -695,7 +695,7 @@ try {
 ## `standingsentryGet()`
 
 ```php
-standingsentryGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+standingsentryGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get standing
@@ -710,12 +710,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -751,7 +751,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -769,7 +769,7 @@ try {
 ## `standingstableGet()`
 
 ```php
-standingstableGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+standingstableGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get standing
@@ -784,12 +784,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -825,7 +825,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -843,7 +843,7 @@ try {
 ## `teamGet()`
 
 ```php
-teamGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+teamGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get teams
@@ -858,12 +858,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -899,7 +899,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -917,7 +917,7 @@ try {
 ## `teamtemplateGet()`
 
 ```php
-teamtemplateGet($wiki, $template, $date): \OpenAPI\Client\Model\BroadcastersGet200Response
+teamtemplateGet($wiki, $template, $date): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get a team template
@@ -932,12 +932,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -965,7 +965,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -983,7 +983,7 @@ try {
 ## `teamtemplatelistGet()`
 
 ```php
-teamtemplatelistGet($wiki, $pagination): \OpenAPI\Client\Model\BroadcastersGet200Response
+teamtemplatelistGet($wiki, $pagination): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get a list of team templates
@@ -998,12 +998,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1029,7 +1029,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -1047,7 +1047,7 @@ try {
 ## `tournamentGet()`
 
 ```php
-tournamentGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+tournamentGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get tournaments
@@ -1062,12 +1062,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1103,7 +1103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 
@@ -1121,7 +1121,7 @@ try {
 ## `transferGet()`
 
 ```php
-transferGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \OpenAPI\Client\Model\BroadcastersGet200Response
+transferGet($wiki, $conditions, $query, $limit, $offset, $order, $groupby): \Liquipedia\Client\Model\BroadcastersGet200Response
 ```
 
 Get transfers
@@ -1136,12 +1136,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
+$config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKey('authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
+// $config = Liquipedia\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\V3Api(
+$apiInstance = new Liquipedia\Client\Api\V3Api(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1177,7 +1177,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
+[**\Liquipedia\Client\Model\BroadcastersGet200Response**](../Model/BroadcastersGet200Response.md)
 
 ### Authorization
 

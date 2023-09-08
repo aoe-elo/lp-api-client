@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Liquipedia\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Liquipedia\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Liquipedia\Client\ApiException;
+use Liquipedia\Client\Configuration;
+use Liquipedia\Client\HeaderSelector;
+use Liquipedia\Client\ObjectSerializer;
 
 /**
  * V3Api Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Liquipedia\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -181,9 +181,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['broadcastersGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function broadcastersGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['broadcastersGet'][0])
     {
@@ -205,9 +205,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['broadcastersGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function broadcastersGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['broadcastersGet'][0])
     {
@@ -250,68 +250,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -332,7 +332,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -340,7 +340,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -348,7 +348,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -356,7 +356,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -412,7 +412,7 @@ class V3Api
      */
     public function broadcastersGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['broadcastersGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->broadcastersGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -629,9 +629,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['companyGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function companyGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['companyGet'][0])
     {
@@ -653,9 +653,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['companyGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function companyGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['companyGet'][0])
     {
@@ -698,68 +698,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -780,7 +780,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -788,7 +788,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -796,7 +796,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -804,7 +804,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -860,7 +860,7 @@ class V3Api
      */
     public function companyGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['companyGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->companyGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -1077,9 +1077,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datapointGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function datapointGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['datapointGet'][0])
     {
@@ -1101,9 +1101,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datapointGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function datapointGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['datapointGet'][0])
     {
@@ -1146,68 +1146,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1228,7 +1228,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1236,7 +1236,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1244,7 +1244,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1252,7 +1252,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1308,7 +1308,7 @@ class V3Api
      */
     public function datapointGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['datapointGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->datapointGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -1525,9 +1525,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['externalmedialinkGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function externalmedialinkGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['externalmedialinkGet'][0])
     {
@@ -1549,9 +1549,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['externalmedialinkGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function externalmedialinkGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['externalmedialinkGet'][0])
     {
@@ -1594,68 +1594,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1676,7 +1676,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1684,7 +1684,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1692,7 +1692,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1700,7 +1700,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1756,7 +1756,7 @@ class V3Api
      */
     public function externalmedialinkGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['externalmedialinkGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->externalmedialinkGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -1975,9 +1975,9 @@ class V3Api
      * @param  string $streamurls If you want to get stream urls to link to. Read the full documentation on how this correlates with &#x60;rawstreams&#x60;.  **Example:** &#x60;true&#x60;, &#x60;false&#x60; (optional, default to 'false')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['matchGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function matchGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, $rawstreams = 'false', $streamurls = 'false', string $contentType = self::contentTypes['matchGet'][0])
     {
@@ -2001,9 +2001,9 @@ class V3Api
      * @param  string $streamurls If you want to get stream urls to link to. Read the full documentation on how this correlates with &#x60;rawstreams&#x60;.  **Example:** &#x60;true&#x60;, &#x60;false&#x60; (optional, default to 'false')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['matchGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function matchGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, $rawstreams = 'false', $streamurls = 'false', string $contentType = self::contentTypes['matchGet'][0])
     {
@@ -2046,68 +2046,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2128,7 +2128,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2136,7 +2136,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2144,7 +2144,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2152,7 +2152,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2212,7 +2212,7 @@ class V3Api
      */
     public function matchGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, $rawstreams = 'false', $streamurls = 'false', string $contentType = self::contentTypes['matchGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->matchGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $rawstreams, $streamurls, $contentType);
 
         return $this->client
@@ -2451,9 +2451,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['placementGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function placementGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['placementGet'][0])
     {
@@ -2475,9 +2475,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['placementGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function placementGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['placementGet'][0])
     {
@@ -2520,68 +2520,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2602,7 +2602,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2610,7 +2610,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2618,7 +2618,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2626,7 +2626,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2682,7 +2682,7 @@ class V3Api
      */
     public function placementGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['placementGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->placementGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -2899,9 +2899,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['playerGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function playerGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['playerGet'][0])
     {
@@ -2923,9 +2923,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['playerGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function playerGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['playerGet'][0])
     {
@@ -2968,68 +2968,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3050,7 +3050,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3058,7 +3058,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3066,7 +3066,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3074,7 +3074,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3130,7 +3130,7 @@ class V3Api
      */
     public function playerGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['playerGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->playerGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -3347,9 +3347,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['seriesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function seriesGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['seriesGet'][0])
     {
@@ -3371,9 +3371,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['seriesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function seriesGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['seriesGet'][0])
     {
@@ -3416,68 +3416,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3498,7 +3498,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3506,7 +3506,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3514,7 +3514,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3522,7 +3522,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3578,7 +3578,7 @@ class V3Api
      */
     public function seriesGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['seriesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->seriesGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -3795,9 +3795,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['squadplayerGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function squadplayerGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['squadplayerGet'][0])
     {
@@ -3819,9 +3819,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['squadplayerGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function squadplayerGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['squadplayerGet'][0])
     {
@@ -3864,68 +3864,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3946,7 +3946,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3954,7 +3954,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3962,7 +3962,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3970,7 +3970,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4026,7 +4026,7 @@ class V3Api
      */
     public function squadplayerGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['squadplayerGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->squadplayerGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -4243,9 +4243,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['standingsentryGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function standingsentryGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['standingsentryGet'][0])
     {
@@ -4267,9 +4267,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['standingsentryGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function standingsentryGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['standingsentryGet'][0])
     {
@@ -4312,68 +4312,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4394,7 +4394,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4402,7 +4402,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4410,7 +4410,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4418,7 +4418,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4474,7 +4474,7 @@ class V3Api
      */
     public function standingsentryGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['standingsentryGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->standingsentryGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -4691,9 +4691,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['standingstableGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function standingstableGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['standingstableGet'][0])
     {
@@ -4715,9 +4715,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['standingstableGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function standingstableGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['standingstableGet'][0])
     {
@@ -4760,68 +4760,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4842,7 +4842,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4850,7 +4850,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4858,7 +4858,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4866,7 +4866,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4922,7 +4922,7 @@ class V3Api
      */
     public function standingstableGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['standingstableGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->standingstableGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -5139,9 +5139,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['teamGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function teamGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['teamGet'][0])
     {
@@ -5163,9 +5163,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['teamGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function teamGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['teamGet'][0])
     {
@@ -5208,68 +5208,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5290,7 +5290,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5298,7 +5298,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5306,7 +5306,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5314,7 +5314,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5370,7 +5370,7 @@ class V3Api
      */
     public function teamGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['teamGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->teamGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -5583,9 +5583,9 @@ class V3Api
      * @param  string $date Liquipedia supports historical logos, but will require the date to show them.  **Example:** &#x60;2009-06-05&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['teamtemplateGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function teamtemplateGet($wiki, $template, $date = null, string $contentType = self::contentTypes['teamtemplateGet'][0])
     {
@@ -5603,9 +5603,9 @@ class V3Api
      * @param  string $date Liquipedia supports historical logos, but will require the date to show them.  **Example:** &#x60;2009-06-05&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['teamtemplateGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function teamtemplateGetWithHttpInfo($wiki, $template, $date = null, string $contentType = self::contentTypes['teamtemplateGet'][0])
     {
@@ -5648,68 +5648,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5730,7 +5730,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5738,7 +5738,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5746,7 +5746,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5754,7 +5754,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5802,7 +5802,7 @@ class V3Api
      */
     public function teamtemplateGetAsyncWithHttpInfo($wiki, $template, $date = null, string $contentType = self::contentTypes['teamtemplateGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->teamtemplateGetRequest($wiki, $template, $date, $contentType);
 
         return $this->client
@@ -5976,9 +5976,9 @@ class V3Api
      * @param  int $pagination .  **Example:** &#x60;1&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['teamtemplatelistGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function teamtemplatelistGet($wiki, $pagination = null, string $contentType = self::contentTypes['teamtemplatelistGet'][0])
     {
@@ -5995,9 +5995,9 @@ class V3Api
      * @param  int $pagination .  **Example:** &#x60;1&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['teamtemplatelistGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function teamtemplatelistGetWithHttpInfo($wiki, $pagination = null, string $contentType = self::contentTypes['teamtemplatelistGet'][0])
     {
@@ -6040,68 +6040,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6122,7 +6122,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6130,7 +6130,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6138,7 +6138,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6146,7 +6146,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6192,7 +6192,7 @@ class V3Api
      */
     public function teamtemplatelistGetAsyncWithHttpInfo($wiki, $pagination = null, string $contentType = self::contentTypes['teamtemplatelistGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->teamtemplatelistGetRequest($wiki, $pagination, $contentType);
 
         return $this->client
@@ -6354,9 +6354,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tournamentGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function tournamentGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['tournamentGet'][0])
     {
@@ -6378,9 +6378,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['tournamentGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function tournamentGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['tournamentGet'][0])
     {
@@ -6423,68 +6423,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6505,7 +6505,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6513,7 +6513,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6521,7 +6521,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6529,7 +6529,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6585,7 +6585,7 @@ class V3Api
      */
     public function tournamentGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['tournamentGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->tournamentGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
@@ -6802,9 +6802,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error
+     * @return \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error
      */
     public function transferGet($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['transferGet'][0])
     {
@@ -6826,9 +6826,9 @@ class V3Api
      * @param  string $groupby What you want your results grouped by (this can be helpful when using aggregate functions).  **Example:** &#x60;pagename ASC&#x60; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['transferGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Liquipedia\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\BroadcastersGet200Response|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error|\OpenAPI\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Liquipedia\Client\Model\BroadcastersGet200Response|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error|\Liquipedia\Client\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function transferGetWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['transferGet'][0])
     {
@@ -6871,68 +6871,68 @@ class V3Api
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\BroadcastersGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BroadcastersGet200Response' !== 'string') {
+                        if ('\Liquipedia\Client\Model\BroadcastersGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BroadcastersGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\BroadcastersGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 429:
-                    if ('\OpenAPI\Client\Model\Error' === '\SplFileObject') {
+                    if ('\Liquipedia\Client\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Error' !== 'string') {
+                        if ('\Liquipedia\Client\Model\Error' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\Liquipedia\Client\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+            $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6953,7 +6953,7 @@ class V3Api
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BroadcastersGet200Response',
+                        '\Liquipedia\Client\Model\BroadcastersGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6961,7 +6961,7 @@ class V3Api
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6969,7 +6969,7 @@ class V3Api
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6977,7 +6977,7 @@ class V3Api
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Error',
+                        '\Liquipedia\Client\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7033,7 +7033,7 @@ class V3Api
      */
     public function transferGetAsyncWithHttpInfo($wiki, $conditions = null, $query = null, $limit = null, $offset = null, $order = null, $groupby = null, string $contentType = self::contentTypes['transferGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\BroadcastersGet200Response';
+        $returnType = '\Liquipedia\Client\Model\BroadcastersGet200Response';
         $request = $this->transferGetRequest($wiki, $conditions, $query, $limit, $offset, $order, $groupby, $contentType);
 
         return $this->client
