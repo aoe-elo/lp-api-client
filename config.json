@@ -1,0 +1,5 @@
+{
+	"variableNamingConvention": "camelCase",
+	"composerPackageName": "liquipedia/api-client",
+  	"invokerPackage": "Liquipedia\\Client"
+}
